@@ -7,6 +7,7 @@ def clean(input1, input2,output):
     combine = combine.dropna()
     check_job = combine['job'].str.contains('insurance|Insurance')
     combine = combine[~check_job]
+    print(combine.shape)
 
     return combine
 
